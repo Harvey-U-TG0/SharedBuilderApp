@@ -9,7 +9,7 @@ public class API : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.anyKeyDown)
+		if ((Input.anyKeyDown) || (Input.GetTouch(0).phase == TouchPhase.Began))
 		{
 			StartCoroutine(SendRequest());
 			print("test");

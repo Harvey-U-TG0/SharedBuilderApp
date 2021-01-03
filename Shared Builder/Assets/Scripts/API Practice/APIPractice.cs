@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class API : MonoBehaviour
+public class APIPractice : MonoBehaviour
 {
 	// Call Method Through: StartCourotine(SendRequest());
 

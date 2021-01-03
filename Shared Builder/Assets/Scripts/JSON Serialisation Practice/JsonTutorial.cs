@@ -19,6 +19,8 @@ public class JsonTutorial : MonoBehaviour
         myObject.array = new int[] { 1, 2, 3 };
         myObject.TwoArray = new int[][] { new int[] { 1, 2 } };
         myObject.cucmber = new Cucumber();
+        myObject.cucumbers = new List<Cucumber> { new Cucumber(),new Cucumber()};
+
 
         print(myObject.TwoArray);
 

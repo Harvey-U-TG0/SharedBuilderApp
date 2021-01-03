@@ -14,6 +14,7 @@ public class MyClass
     public int[] array;
     public int[][] TwoArray;
     public Cucumber cucmber;
+    public List<Cucumber> cucumbers;
 }
 
 [System.Serializable]

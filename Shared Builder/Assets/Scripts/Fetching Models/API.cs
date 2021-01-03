@@ -5,6 +5,10 @@ using UnityEngine.Networking;
 
 public class API : MonoBehaviour
 {
+	public List<Model> models;
+	public Model outputModel;
+
+
 	// after / is the model ID
 	private string urlGetModel = "http://192.168.1.73:5000/getModel";
 
@@ -35,6 +39,7 @@ public class API : MonoBehaviour
 
 	public void ParseModelJSON(string recievedModelJSON)
 	{
-		Model testBackFromJson = JsonUtility.FromJson<Model>(recievedModelJSON);
+		outputModel = JsonUtility.FromJson<Model>(recievedModelJSON);
+		//models.Add(outputModel);
 	}
 }

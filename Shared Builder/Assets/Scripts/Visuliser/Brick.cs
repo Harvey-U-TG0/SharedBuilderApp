@@ -6,9 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class Brick : MonoBehaviour
 {
-    public string type;
-    public int[] position;
-    public string colour;
+    public string type; // 2x2, 1x4 
+    public int[] position; //{0,4}
+    public string colour; // red,green, blue, yellow
+    public List<string> users; // List of usernames that have the brick in that position
 
     [SerializeField]
     private GameObject defaultModel;
@@ -28,5 +29,11 @@ public class Brick : MonoBehaviour
         model.transform.parent = transform;
         model.transform.localScale = Vector3.one;
         model.transform.localPosition = Vector3.zero;
+    }
+
+    public void DestroyBrick()
+    {
+        // Other animation or sound functionality can be executed here
+        Destroy(gameObject);
     }
 }

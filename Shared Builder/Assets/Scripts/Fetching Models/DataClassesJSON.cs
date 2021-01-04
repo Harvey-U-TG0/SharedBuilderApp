@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// The data strucutre for model information
+// The data strucutre for model information from server
 [System.Serializable]
 public class Model
 {

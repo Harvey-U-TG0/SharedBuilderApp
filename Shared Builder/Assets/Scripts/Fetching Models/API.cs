@@ -5,8 +5,7 @@ using UnityEngine.Networking;
 
 public class API : MonoBehaviour
 {
-	public List<Model> models;
-	public Model outputModel;
+	public Model latestModel;
 
 
 	// after / is the model ID
@@ -39,7 +38,9 @@ public class API : MonoBehaviour
 
 	public void ParseModelJSON(string recievedModelJSON)
 	{
-		outputModel = JsonUtility.FromJson<Model>(recievedModelJSON);
+		latestModel = JsonUtility.FromJson<Model>(recievedModelJSON);
 		//models.Add(outputModel);
 	}
+
+	
 }

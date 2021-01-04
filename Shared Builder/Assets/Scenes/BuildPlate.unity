@@ -124,6 +124,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &86158967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86158968}
+  - component: {fileID: 86158969}
+  m_Layer: 0
+  m_Name: BuildZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86158968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86158967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_Children:
+  - {fileID: 543450651920868797}
+  m_Father: {fileID: 1278117721}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86158969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86158967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f6218d5a5400740bdd9c35432560a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  latestBrickVisuals: []
+  bricksOnPlate: []
+  brickPrefab: {fileID: 1106362824045671303, guid: 13d36975de2a566439126193c5496f56,
+    type: 3}
+  api: {fileID: 499816078}
+  brickData: {fileID: 2057290587}
 --- !u!1 &93430543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,7 +2192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132147711934216}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BuildPlate, Assembly-CSharp
         m_MethodName: RemoveBrick
         m_Mode: 1
@@ -2738,7 +2788,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 543450651920868797}
+  - {fileID: 86158968}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3007,7 +3057,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132147711934216}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BuildPlate, Assembly-CSharp
         m_MethodName: AddBrick
         m_Mode: 1
@@ -3736,7 +3786,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132147711934216}
+      - m_Target: {fileID: 86158969}
         m_TargetAssemblyTypeName: BuildPlate, Assembly-CSharp
         m_MethodName: UpdateBuildPlate
         m_Mode: 1
@@ -3849,10 +3899,54 @@ MonoBehaviour:
   - textureKey: white
     texture: {fileID: 2800000, guid: 2d60c09d5450bf54dbf57373c6c552f4, type: 3}
   brickTypes:
-  - brickTypeKey: 
-    brickObject: {fileID: 0}
-  - brickTypeKey: 
-    brickObject: {fileID: 0}
+  - brickTypeKey: 1x1
+    brickObject: {fileID: 8834738177956843024, guid: 78533573bc58ea942aa4dfaee58cdff0,
+      type: 3}
+  - brickTypeKey: 1x2
+    brickObject: {fileID: 6599146576439870262, guid: 5957f60ae5646864a9928258d0cea405,
+      type: 3}
+  - brickTypeKey: 1x3
+    brickObject: {fileID: 4987228968853638730, guid: 5c0027cba7fd46544889231b9523421c,
+      type: 3}
+  - brickTypeKey: 1x4
+    brickObject: {fileID: 6464754161798921120, guid: b1b10f536f8746a4c8f8c8d03279c286,
+      type: 3}
+  - brickTypeKey: 1x6
+    brickObject: {fileID: 7647471934865624144, guid: 18ef118c96db20b4885a49d014bb1f64,
+      type: 3}
+  - brickTypeKey: 2x2
+    brickObject: {fileID: 5113363873264779075, guid: 9b764cb7888a9694b9f87c8da72f7c65,
+      type: 3}
+  - brickTypeKey: 2x3
+    brickObject: {fileID: 5887463702416883238, guid: d550a8ef211bfce4badd422f4d64e73e,
+      type: 3}
+  - brickTypeKey: 2x4
+    brickObject: {fileID: 7414459214433860810, guid: 18d6f328801eaa24d866c43b84a300ac,
+      type: 3}
+  - brickTypeKey: 2x6
+    brickObject: {fileID: 5521815121038666648, guid: fba3d45f3e533e343823297c4bb00142,
+      type: 3}
+  - brickTypeKey: 2x1
+    brickObject: {fileID: 8564114829707851739, guid: df8f446d01760044581ab45a85aabebf,
+      type: 3}
+  - brickTypeKey: 3x1
+    brickObject: {fileID: 4985055826273991620, guid: c727f5fce97155a47acab3e9fa0b4a7c,
+      type: 3}
+  - brickTypeKey: 3x2
+    brickObject: {fileID: 895823856632593196, guid: 4f7f26e08965c9d4e8c43cb5996fe80a,
+      type: 3}
+  - brickTypeKey: 4x1
+    brickObject: {fileID: 6775544313527129657, guid: f9a4aae1a4fd6974db62ad834ab82584,
+      type: 3}
+  - brickTypeKey: 4x2
+    brickObject: {fileID: 8633316402758015175, guid: e83a32979e9f28242a0df4db9ffe29b0,
+      type: 3}
+  - brickTypeKey: 6x1
+    brickObject: {fileID: 8159260065999431359, guid: 3aa1b8ec80386e745ace8459fcee1a4c,
+      type: 3}
+  - brickTypeKey: 6x2
+    brickObject: {fileID: 6408179314698316533, guid: 1a3d1511056d0404b93993659b4269c2,
+      type: 3}
 --- !u!4 &2057290588
 Transform:
   m_ObjectHideFlags: 0
@@ -3874,13 +3968,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147711934215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 0, z: 4.7}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1278117721}
+  m_Father: {fileID: 86158968}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &919132147711934215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,7 +3986,6 @@ GameObject:
   - component: {fileID: 543450651920868797}
   - component: {fileID: 3469287837918931480}
   - component: {fileID: 1711813855198142162}
-  - component: {fileID: 919132147711934216}
   m_Layer: 0
   m_Name: 12x12 Build Plate
   m_TagString: Untagged
@@ -3900,24 +3993,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132147711934216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147711934215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f6218d5a5400740bdd9c35432560a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  latestBrickVisuals: []
-  bricksOnPlate: []
-  brickPrefab: {fileID: 1106362824045671303, guid: 13d36975de2a566439126193c5496f56,
-    type: 3}
-  api: {fileID: 499816078}
-  brickData: {fileID: 2057290587}
 --- !u!23 &1711813855198142162
 MeshRenderer:
   m_ObjectHideFlags: 0

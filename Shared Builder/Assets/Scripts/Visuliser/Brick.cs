@@ -34,7 +34,7 @@ public class Brick : MonoBehaviour
         AddModel();
 
         // Move to correct location
-        transform.localPosition = new Vector3(-position[0]*.008f, 0 , -position[1] * .008f);
+        transform.localPosition = new Vector3(position[0]*.008f, 0 , -position[1] * .008f);
     }
 
     private void AddModel()

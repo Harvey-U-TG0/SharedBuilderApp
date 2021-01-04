@@ -28,3 +28,10 @@ public class BrickTexture
     public Texture2D texture;
 }
 
+[System.Serializable]
+public class BrickType
+{
+    public string brickTypeKey;
+    public GameObject brickObject;
+}
+

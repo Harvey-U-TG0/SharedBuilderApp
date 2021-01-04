@@ -47,7 +47,7 @@ MonoBehaviour:
   position: 
   colour: 
   users: []
-  defaultModel: {fileID: 6538999193218613668, guid: 9b764cb7888a9694b9f87c8da72f7c65,
+  fallBackModel: {fileID: 8834738177956843024, guid: 78533573bc58ea942aa4dfaee58cdff0,
     type: 3}
-  fallBackTexture: {fileID: 0}
+  fallBackTexture: {fileID: 2800000, guid: a41ff7740310db04499415e18148f2cc, type: 3}
   data: {fileID: 0}

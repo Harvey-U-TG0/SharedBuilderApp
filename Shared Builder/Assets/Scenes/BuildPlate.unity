@@ -3848,6 +3848,11 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: a41ff7740310db04499415e18148f2cc, type: 3}
   - textureKey: white
     texture: {fileID: 2800000, guid: 2d60c09d5450bf54dbf57373c6c552f4, type: 3}
+  brickTypes:
+  - brickTypeKey: 
+    brickObject: {fileID: 0}
+  - brickTypeKey: 
+    brickObject: {fileID: 0}
 --- !u!4 &2057290588
 Transform:
   m_ObjectHideFlags: 0

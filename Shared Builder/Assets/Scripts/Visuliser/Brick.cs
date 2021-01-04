@@ -12,7 +12,7 @@ public class Brick : MonoBehaviour
     public List<string> users; // List of usernames that have the brick in that position
 
     [SerializeField]
-    private GameObject defaultModel;
+    private GameObject fallBackModel;
 
     [SerializeField]
     private Texture fallBackTexture;
@@ -39,33 +39,35 @@ public class Brick : MonoBehaviour
 
     private void AddModel()
     {
-        GameObject model = GameObject.Instantiate(defaultModel);
+        GameObject model;
+        BrickType brickType = data.brickTypes.Find(x => (x.brickTypeKey == type));
+        if (brickType != null)
+        {
+            model = GameObject.Instantiate(brickType.brickObject);
+        }
+        else
+        {
+            Debug.LogError("Could not find model key matching " + type + " to set for this bricks model, Set to fall back model");
+            model = GameObject.Instantiate(fallBackModel);
+        }
+
+        // Initialise position
         model.transform.parent = transform;
         model.transform.localScale = Vector3.one;
         model.transform.localPosition = Vector3.zero;
 
+        // Set Texture
         BrickTexture textureObject = data.textureData.Find(x => (x.textureKey == colour));
         if (textureObject != null)
         {
-            model.GetComponent<Renderer>().material.SetTexture("_BaseMap", textureObject.texture);
+            model.GetComponentInChildren<Renderer>().material.SetTexture("_BaseMap", textureObject.texture);
         }
         else
         {
             Debug.LogError("Could not find texture key matching " + colour + " to apply to this bricks model, Set to fall back texture");
-            model.GetComponent<Renderer>().material.SetTexture("_BaseMap", fallBackTexture);
+            model.GetComponentInChildren<Renderer>().material.SetTexture("_BaseMap", fallBackTexture);
         }
         
-    }
-
-
-
-
-    private void CreateDefaultModel()
-    {
-        GameObject model = GameObject.Instantiate(defaultModel);
-        model.transform.parent = transform;
-        model.transform.localScale = Vector3.one;
-        model.transform.localPosition = Vector3.zero;
     }
 
     public void DestroyBrick()

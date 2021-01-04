@@ -12,6 +12,8 @@ public class BuildPlate : MonoBehaviour
 
     public API api;
 
+    public BrickData brickData;
+
     public void UpdateBuildPlate()
     {
         // Get latest model from API
@@ -88,16 +90,13 @@ public class BuildPlate : MonoBehaviour
     {
         // Create brick
         Brick newBrick = GameObject.Instantiate(brickPrefab).GetComponent<Brick>();
+        newBrick.Initialise(type, position, colour, users);
+        
         newBrick.transform.parent = transform;
         newBrick.transform.localScale = Vector3.one;
         newBrick.transform.localPosition = Vector3.zero;
+        newBrick.data = brickData;
       
-        // Set brick specifications
-        newBrick.type = type;
-        newBrick.position = position;
-        newBrick.colour = colour;
-        newBrick.users = users;
-
         // Add bricks to the list
         bricksOnPlate.Add(newBrick);
     }

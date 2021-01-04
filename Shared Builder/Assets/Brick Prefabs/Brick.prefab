@@ -46,5 +46,8 @@ MonoBehaviour:
   type: 
   position: 
   colour: 
-  defaultModel: {fileID: 919132149155446097, guid: 4ba523085f56e6a4587829745de8da23,
+  users: []
+  defaultModel: {fileID: 6538999193218613668, guid: 9b764cb7888a9694b9f87c8da72f7c65,
     type: 3}
+  fallBackTexture: {fileID: 0}
+  data: {fileID: 0}

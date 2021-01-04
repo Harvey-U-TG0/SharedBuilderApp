@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+// Class for storing brick data for the required visuals
 public class BrickVisual
 {
     public string type; // 2x2, 1x4 
@@ -18,5 +19,12 @@ public class BrickVisual
         colour = _colour;
         users = _users;
     }
-
 }
+
+[System.Serializable]
+public class BrickTexture 
+{
+    public string textureKey;
+    public Texture2D texture;
+}
+

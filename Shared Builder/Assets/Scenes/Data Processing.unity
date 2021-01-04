@@ -817,7 +817,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228d6b525bf340d46997c7d5dbb079d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - userContributions:
+    - bricks:
+      - type: 
+        position: 
+        colour: 
+      - type: 
+        position: 
+        colour: 
+      username: 
+    name: 
+    cost: 0
+  - userContributions: []
+    name: 
+    cost: 0
   outputModel:
     userContributions: []
     name: 

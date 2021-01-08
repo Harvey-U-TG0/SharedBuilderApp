@@ -18,19 +18,19 @@ public class VisuliserCalculations
 		foreach (UserContrib user in userContribs)
 		{
 			// Each usercontrib has a username and list of bricks
-			foreach (BrickInfo brickInfo in user.bricks)
+			foreach (BrickInfo brickInfo in user.brickConfig)
 			{
 				// Check it that brick type, position and colour is in the list already
 				// If so add this username to it, if not make a new entry in the list
-				BrickVisual exisitingBrick = brickVisuals.Find(x => (x.type == brickInfo.type) && (x.position[0] == brickInfo.position[0]) && (x.position[1] == brickInfo.position[1]) && (x.colour == brickInfo.colour));
+				BrickVisual exisitingBrick = brickVisuals.Find(x => (x.type == brickInfo.shapeID) && (x.position[0] == brickInfo.position[0]) && (x.position[1] == brickInfo.position[1]) && (x.colour == brickInfo.colourID));
 				if (exisitingBrick != null)
 				{
 					// Add username to the existing brick
-					exisitingBrick.users.Add(user.username);
+					exisitingBrick.users.Add(user._id);
 				}
 				else
 				{
-					BrickVisual newBrick = new BrickVisual(brickInfo.type,brickInfo.position,brickInfo.colour, new List<string> {user.username});
+					BrickVisual newBrick = new BrickVisual(brickInfo.shapeID,brickInfo.position,brickInfo.colourID, new List<string> {user._id});
 					brickVisuals.Add(newBrick);
 				}
 

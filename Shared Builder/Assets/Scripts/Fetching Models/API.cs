@@ -9,7 +9,7 @@ public class API : MonoBehaviour
 
 
 	// after / is the model ID
-	private string urlGetModel = "http://192.168.1.73:5000/getModel";
+	private string urlGetModel = "http://192.168.1.73:5000/getModel/test";
 
 
 	public void GetModel()

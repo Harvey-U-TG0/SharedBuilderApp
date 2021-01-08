@@ -8,21 +8,21 @@ using UnityEngine;
 public class Model
 {
     public List<UserContrib> userContributions;
-    public string name;
-    public float cost;
+    public string _id; //The id of the model
+    public float cost; // The cost of the model
 }
 
 [System.Serializable]
 public class UserContrib
 {
-    public List<BrickInfo> bricks;
-    public string username;
+    public List<BrickInfo> brickConfig;
+    public string _id; // The users personal id
 }
 
 [System.Serializable]
 public class BrickInfo
 {
-    public string type;
+    public string shapeID;
     public int[] position;
-    public string colour;
+    public string colourID;
 }

@@ -22,7 +22,7 @@ public class UserContrib
 [System.Serializable]
 public class BrickInfo
 {
-    public string shapeID;
+    public int shapeID;
     public int[] position;
-    public string colourID;
+    public int colourID;
 }

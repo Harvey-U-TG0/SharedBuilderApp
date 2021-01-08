@@ -86,7 +86,7 @@ public class BuildPlate : MonoBehaviour
     /// <summary>
     /// Adds a brick ameobject to the scene and brick componenet of that to the list of bricks 
     /// </summary>
-    public void AddBrick(string type, int[] position, string colour, List<string> users)
+    public void AddBrick(int type, int[] position, int colour, List<string> users)
     {
         // Create brick
         Brick newBrick = GameObject.Instantiate(brickPrefab).GetComponent<Brick>();

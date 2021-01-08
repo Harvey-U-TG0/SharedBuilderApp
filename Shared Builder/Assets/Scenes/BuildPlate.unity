@@ -768,7 +768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   latestModel:
     userContributions: []
-    name: 
+    _id: 
     cost: 0
 --- !u!4 &499816079
 Transform:
@@ -2439,6 +2439,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147403542}
   m_CullTransparentMesh: 1
+--- !u!1 &1164806149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164806151}
+  - component: {fileID: 1164806150}
+  m_Layer: 0
+  m_Name: Main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1164806150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164806149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9422850d2d278d4aa7be7cc9a90380a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiController: {fileID: 499816078}
+  buildPlate: {fileID: 86158969}
+--- !u!4 &1164806151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164806149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2596588, y: 1.3809328, z: -0.9319048}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166469940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,19 +3913,19 @@ MonoBehaviour:
   textureData:
   - textureKey: black
     texture: {fileID: 2800000, guid: 52ca2e0bc319dd54e82f4af6796d1bcf, type: 3}
-  - textureKey: blue
+  - textureKey: 8
     texture: {fileID: 2800000, guid: c7e04e079f2d240429649a6642a7e476, type: 3}
-  - textureKey: green
+  - textureKey: 7
     texture: {fileID: 2800000, guid: 73bc9492ecd24cf4abad1270dcf8f970, type: 3}
   - textureKey: orange
     texture: {fileID: 2800000, guid: fcdd8df891a54504795e619dbb0afe90, type: 3}
   - textureKey: pink
     texture: {fileID: 2800000, guid: d3151007af1287042a8f4a8fae80cdfb, type: 3}
-  - textureKey: red
+  - textureKey: 6
     texture: {fileID: 2800000, guid: 921ee703c22cae842a6f7c3b999e2816, type: 3}
   - textureKey: bright green
     texture: {fileID: 2800000, guid: 0c3df4a88c085784b8f7f6524e112078, type: 3}
-  - textureKey: yellow
+  - textureKey: 9
     texture: {fileID: 2800000, guid: d42c35dddf1dce24291073b5223d36ea, type: 3}
   - textureKey: azur
     texture: {fileID: 2800000, guid: c4524df9fc35708409a85b94977572de, type: 3}

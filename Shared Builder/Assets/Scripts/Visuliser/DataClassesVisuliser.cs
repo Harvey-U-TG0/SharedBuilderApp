@@ -6,13 +6,13 @@ using UnityEngine;
 // Class for storing brick data for the required visuals
 public class BrickVisual
 {
-    public string type; // 2x2, 1x4 
+    public int type; // 2x2, 1x4 
     public int[] position; //{0,4}
-    public string colour; // red,green, blue, yellow
+    public int colour; // red,green, blue, yellow
     public List<string> users; // List of usernames that have the brick in that position
 
     // Constructor
-    public BrickVisual(string _type, int[] _position, string _colour, List<string> _users)
+    public BrickVisual(int _type, int[] _position, int _colour, List<string> _users)
     {
         type = _type;
         position = _position;
@@ -24,14 +24,14 @@ public class BrickVisual
 [System.Serializable]
 public class BrickTexture 
 {
-    public string textureKey;
+    public int textureKey;
     public Texture2D texture;
 }
 
 [System.Serializable]
 public class BrickType
 {
-    public string brickTypeKey;
+    public int brickTypeKey;
     public GameObject brickObject;
 }
 

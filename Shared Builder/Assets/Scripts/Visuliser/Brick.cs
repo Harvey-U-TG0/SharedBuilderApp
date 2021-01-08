@@ -6,9 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class Brick : MonoBehaviour
 {
-    public string type; // 2x2, 1x4 
+    public int type; // 2x2, 1x4 
     public int[] position; //{0,4}
-    public string colour; // red,green, blue, yellow
+    public int colour; // red,green, blue, yellow
     public List<string> users; // List of usernames that have the brick in that position
 
     [SerializeField]
@@ -20,7 +20,7 @@ public class Brick : MonoBehaviour
     // Reference to scenes brick data
     public BrickData data;
 
-    public void Initialise(string _type, int[] _position, string _colour, List<string> _users)
+    public void Initialise(int _type, int[] _position, int _colour, List<string> _users)
     {
         type = _type;
         position = _position;

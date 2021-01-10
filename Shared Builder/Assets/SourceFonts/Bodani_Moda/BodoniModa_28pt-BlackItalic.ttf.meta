@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: c9ba1b15ba97cb743b5eb7880747f28d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bodoni Moda 28pt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 02873716d5854044eb44da0ee1247b8c, type: 3}
+  - {fileID: 12800000, guid: d27ed9c9b5c7d4c47bbca9ea6f9c0a28, type: 3}
+  - {fileID: 12800000, guid: c42d8b16d48947f4780db0742e6842fc, type: 3}
+  - {fileID: 12800000, guid: 44761cfa03c36ab49a482a51867439bb, type: 3}
+  - {fileID: 12800000, guid: 63ab4329f7a60c14d8885ed321076904, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

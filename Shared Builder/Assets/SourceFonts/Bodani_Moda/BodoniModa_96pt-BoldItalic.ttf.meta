@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: eea0f749313376a4e8eaff0c02783a5e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bodoni Moda 96pt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8dbd27fc2a4b13a41b04d4d9e4f7e9c6, type: 3}
+  - {fileID: 12800000, guid: e26939d6b5e963241b67e189426b3db7, type: 3}
+  - {fileID: 12800000, guid: 54e68b94ac41df542afd5667b29cf333, type: 3}
+  - {fileID: 12800000, guid: ab11393c06c63714384e6007cfec54cc, type: 3}
+  - {fileID: 12800000, guid: 18ba931747ea8a84fa12b8d7f21bb525, type: 3}
+  - {fileID: 12800000, guid: f9eab6a307126884a9a7d578145088f1, type: 3}
+  - {fileID: 12800000, guid: 9aa2be9857bdb91468199e7016bf48a6, type: 3}
+  - {fileID: 12800000, guid: 6a2e664b0c9e8b04a86dfb171eb89cfc, type: 3}
+  - {fileID: 12800000, guid: 6cfe8c9470fbc2c478b61acad5fc0484, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

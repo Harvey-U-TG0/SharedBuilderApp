@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // The Brick object
 [System.Serializable]
@@ -20,12 +21,31 @@ public class Brick : MonoBehaviour
     // Reference to scenes brick data
     public BrickData data;
 
+    public GameObject modelHolder;
+
+    public TextMeshProUGUI textLabel;
+
     public void Initialise(int _type, int[] _position, int _colour, List<string> _users)
     {
         type = _type;
         position = _position;
         colour = _colour;
         users = _users;
+        SetText(users);
+    }
+
+    private void SetText(List<string> users)
+    {
+        if (users.Count == 1)
+        {
+            char c = users[0][0];
+            textLabel.text = c.ToString();
+        }
+        else
+        {
+            textLabel.text = "";
+        }
+        
     }
 
     private void Start()
@@ -33,8 +53,8 @@ public class Brick : MonoBehaviour
         //create relevent prefab model in world
         AddModel();
 
-        // Move to correct location
-        transform.localPosition = new Vector3(position[0]*.008f, 0 , -position[1] * .008f);
+        // Move to correct location (Position is in format rows,cols) In unity rows change in the z axis and cols change in the x axis
+        transform.localPosition = new Vector3(position[1]*.008f, 0 , -position[0] * .008f);
     }
 
     private void AddModel()
@@ -52,7 +72,7 @@ public class Brick : MonoBehaviour
         }
 
         // Initialise position
-        model.transform.parent = transform;
+        model.transform.parent = modelHolder.transform;
         model.transform.localScale = Vector3.one;
         model.transform.localPosition = Vector3.zero;
 

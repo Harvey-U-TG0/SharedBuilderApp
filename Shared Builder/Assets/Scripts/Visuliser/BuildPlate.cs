@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuildPlate : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class BuildPlate : MonoBehaviour
 
     public BrickData brickData;
 
+    public TextMeshProUGUI costLabel;
+
     public void UpdateBuildPlate()
     {
         // Get latest model from API
@@ -24,7 +27,15 @@ public class BuildPlate : MonoBehaviour
         Debug.Log("Updated Build Plate");
 
         CompareLists();
+        int brickQuant = latestBrickVisuals.Count;
+        SetPrice(brickQuant*5);
     }
+
+    private void SetPrice(int quant)
+    {
+        costLabel.text = (quant.ToString() + ("p"));
+    }
+
 
     /// <summary>
     /// Compares the plate bricks and visual bricks and updates the plate accordingly
